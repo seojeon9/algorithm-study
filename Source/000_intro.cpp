@@ -13,7 +13,22 @@ int main(){
 	s.insert(45);
 	
 	cout << "Multiset elements after sort\n";
-	for( auto it = s.)
+	for( auto it = s.begin(); it != s.end(); it++)
+		cout << *it << ' ';
+	cout << '\n';
+	
+	auto it1 = s.find(10);
+	auto it2 = s.find(90);
+	
+	s.erase(it1,it2);
+	
+	cout << "Multiset elements after erase:\n";
+	for( auto it = s.begin(); it != s.end(); it++)
+		cout << (*it) << ' ';
+	s.erase(s.begin());
+	cout << '\n';
+	for( auto it = s.begin(); it != s.end(); it++)
+		cout << (*it) << ' ';
 	return 0;	
 }
 
