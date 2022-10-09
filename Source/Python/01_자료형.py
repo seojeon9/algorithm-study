@@ -170,6 +170,131 @@ print(a.count(3))
 a.remove(1)
 print(a)
 
+# 특정 값 데이터 모두 삭제
+a = [1,2,3,4,5,5,5]
+remove_set = {3,5}
+
+# remove_set에 포함되지 않은 값만을 저장
+result = [i for i in a if i not in remove_set]
+print(result)
+
+############################################
+#%%
+
+# 문자열 자료형
+data = 'Hello World'
+print(data)
+
+data = "Don't you know \"Python\"?"
+print(data)
+
+# 문자열 연산
+a = 'hello'
+b = 'world'
+
+print(a + " " + b)
+
+a = 'string'
+print(a * 3)
+
+a = "ABCDEF"
+print(a[2:4])
+
+# 튜플 자료형
+# 튜플을 한번 선언된 값을 변경할 수 없다.
+# 리스트는 대괄호를 이용하지만, 튜플은 소괄호를 이용한다.
+
+a = (1,2,3,4)
+print(a)
+
+# a[2] = 7 # TypeError: 'tuple' object does not support item assignment
+
+
+# 튜플 자료형 -> 그래프 알고리즘을 구현할 때 자주 사용
+# 다익스트라 최단 경로 알고리즘처럼 최단 경로르 찾아주는 알고리즘의 내부에서는 우선순위 큐를 이용하는데 
+# 해당 알고리즘에서 우선순위 큐에 한 번 들어간 값은 변하지 않는다.
+# 그래서 그 우선순위 큐에 들어가는 데이터를 튜플로 구성하여 소스코드를 작성한다.
+# 이렇게 알고리즘을 구현하는 과정에서 일부로 튜플을 이용하게 되면 
+# 혹여나 자신이 알고리즘을 잘못 작성함으로써 변경하면 안 되는 값이 변경되고 있지는 않은지 체크할 수 이ㅣㅆ다.
+# 또한 튜플은 리스트에 비해 상대적으로 공간 효율적이고, 일반적으로 각 원소의 성질이 다를 때 주로 사용한다.
+# 다익스트라 최단 경로 알고리즘에서는 '비용'과 '노드 번호' 라는 다른 성질의 데이터를 
+# (비용, 노드 번호)의 형태로 함께 튜플로 묶어서 관리하는 것이 관례이다
+
+
+############################################
+#%%
+
+# 사전 자료형
+# - 키 쌍으로 구성되는 데이터
+
+data = dict()
+data['사과'] = 'Apple'
+data['바나나'] = 'Banana'
+data['코코넛'] = 'Coconut'
+
+print(data)
+
+if '사과' in data:
+    print("'사과'를 키로 가지는 데이터가 존재 합니다.", data['사과'])
+    
+# iterable 자료형 : 리스트, 문자열, 튜플 -> in 문법 사용 가능
+
+# 사전 자료형 관련 함수
+data = dict()
+data['사과'] = 'Apple'
+data['바나나'] = 'Banana'
+data['코코넛'] = 'Coconut'
+
+# 키 데이터만 담은 리스트
+key_list = data.keys()
+# 값 데이터만 담은 리스트
+value_list = data.values()
+print(key_list)
+print(value_list)
+
+# 각 키에 따른 값을 하나씩 출력
+for key in key_list:
+    print(data[key])
+    
+############################################
+#%%
+
+# 집합 자료형
+# 중복을 허용하지 않는다.
+# 순서가 없다.
+
+# 집합 자료형 초기화 방법 1
+data = set([1,1,3,4,5,5,6])
+print(data)
+
+# 집합 자료형 초기화 방법 2
+data = {1,1,2,3,4,4,5}
+print(data)
+
+# 집합 자료형의 연산
+a = {1,2,3,4,5}
+b = {3,4,5,6,7}
+
+print(a | b) # 합집합
+print(a & b) # 교집합
+print(a - b) # 차집합
+
+# 집합 자료형 관련 함수
+data = {1,2,3}
+print(data)
+
+# 새로운 원소 추가
+data.add(4)
+print(data)
+
+# 새로운 원소 여러 개 추가
+data.update([5,6])
+print(data)
+
+# 특정한 값을 갖는 원소 삭제
+data.remove(3)
+print(data)
+
 
 
 
