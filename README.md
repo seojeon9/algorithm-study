@@ -47,7 +47,6 @@ daily_problems/
 #### 파일 내용 구조
 ```python
 # 문제 링크: https://www.acmicpc.net/problem/1000
-# 난이도: Easy
 # 풀이 시간: 30분
 # 시도 횟수: 1회
 
