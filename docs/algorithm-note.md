@@ -25,7 +25,7 @@ nums = [1,2,3,4,]
 s = set()
 
 for n in nums:
-    if n un s:
+    if n in s:
         print("중복")
     s.add(n)
 ```
@@ -85,7 +85,7 @@ def bfs(start):
 2. DFS(탐색/조합용)
 ```
 def dfs(node):
-    visited.add{node}
+    visited.add(node)
 
     for next in graph[node]
         if next not in visited:
